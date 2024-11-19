@@ -487,6 +487,7 @@ def composite_spectra(
             output = core.run()[0]
         else:
             output = core.run([dust[iS]])[0]
-        #
+        
         output.to_hdf(get_output_name(prefix, ".hdf5", snapList[iS], outPath), "w")
 
+    return output
